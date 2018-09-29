@@ -1,0 +1,32 @@
+{
+  "name": "ebabel-light",
+  "version": "1.0.0",
+  "description": "Setup a THREE.js PointLight and add it to the scene.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "jsdoc": "node ./node_modules/.bin/jsdoc -d docs ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebabel-eu/ebabel-light.git"
+  },
+  "keywords": [
+    "games",
+    "module",
+    "javascript"
+  ],
+  "author": "Thomas Amar <hello@ebabel.eu> (https://ebabel.eu/)",
+  "contributors": [
+    "Dave Pitts <dgapitts@gmail.com>"
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ebabel-eu/ebabel-light/issues"
+  },
+  "homepage": "https://github.com/ebabel-eu/ebabel-light#readme",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "jsdoc": "^3.5.5"
+  }
+}
