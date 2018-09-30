@@ -5,7 +5,16 @@ let scene;
 
 beforeEach(() => {
   // Mocking.
-  THREE = { PointLight: class PointLight { constructor() { this.position = { set: () => {} } } } };
+  THREE = {
+    PointLight: class PointLight {
+      constructor() {
+        this.position = {
+          set: () => {}
+        };
+      }
+    }
+  };
+
   scene = { add: () => {} };
 });
 

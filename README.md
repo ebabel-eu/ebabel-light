@@ -1,4 +1,6 @@
 # ebabel-light
+[![Build Status](https://travis-ci.org/ebabel-eu/ebabel-light.svg?branch=master)](https://travis-ci.org/ebabel-eu/ebabel-light)
+
 Setup a THREE.js PointLight and add it to the scene.
 
 ## Instructions for Module Usage in your project/game
