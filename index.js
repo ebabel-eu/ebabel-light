@@ -1,5 +1,7 @@
 'use strict';
 
+const hexStringToInt = require('./hex-string-to-int.js');
+
 /**
  * `light`
  * Setup a THREE.js PointLight and add it to the scene.
@@ -20,24 +22,14 @@ const light = (input) => {
     name = 'main-light'
   } = input;
 
-  function toHex(str) {
-    var result = '';
-    for (var i=0; i<str.length; i++) {
-      result += str.charCodeAt(i).toString(16);
-    }
-    return result;
-  }
-
   if (typeof color === 'string') {
-    var isValidColor  = /^#[0-9A-F]{6}$/i.test(color);
+    const isValidColor  = /^#[0-9A-F]{6}$/i.test(color);
     if (isValidColor) {
-      this.color= toHex(color);
-    } 
-    else {
+      this.color = hexStringToInt(color);
+    } else {
       throw new Error(`Invalid color ${color}`);
     }
-  }
-  else {
+  } else {
     this.color=color;
   }
 
@@ -49,7 +41,6 @@ const light = (input) => {
     position[2]
   );
   scene.add(mainLight);
-
 
   return mainLight;
 };

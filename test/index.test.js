@@ -1,20 +1,11 @@
+const hexStringToInt = require('../hex-string-to-int.js');
 const light = require('../index');
-
-
 
 let THREE;
 let scene;
 
 beforeEach(() => {
   // Mocking.
-  function toHex(str) {
-    var result = '';
-    for (var i=0; i<str.length; i++) {
-      result += str.charCodeAt(i).toString(16);
-    }
-    return result;
-  }
-
   THREE = {
     PointLight: class PointLight {
       constructor(color) {
@@ -25,10 +16,10 @@ beforeEach(() => {
         if (typeof color === 'string') {
           var isValidColor  = /^#[0-9A-F]{6}$/i.test(color);
           if (isValidColor) {
-            this.color= toHex(color);
+            this.color= hexStringToInt(color);
           } 
           else {
-            throw new Error('Invalid color ' + color );
+            throw new Error(`Invalid color ${color}`);
           }
         }
         else {
@@ -54,10 +45,11 @@ test('light with non-default color', () => {
 });
 
 test('light with valid color but in string format three.js handles this', () => {
+  // conversion tested '#cccccc' -->> 0xcccccc
   const color = '#cccccc';
   const result = light({ THREE, scene, color });
   //console.log(`1: ${JSON.stringify(result)}`); /* eslint no-console: 0 */ 
-  expect(result.color).toBe("23636363636363");
+  expect(result.color).toBe(13421772);
 });
 
 test('light with invalid color in string format', () => {
