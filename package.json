@@ -1,6 +1,6 @@
 {
   "name": "ebabel-light",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Setup a THREE.js PointLight and add it to the scene.",
   "main": "index.js",
   "engines": {
