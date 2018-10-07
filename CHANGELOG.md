@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.5](https://github.com/ebabel-games/ebabel-light/releases/tag/v1.0.5)
+- Refactor the folder and files structure to match other modules and automatically update documentation.
+
 ## [1.0.4](https://github.com/ebabel-games/ebabel-light/releases/tag/v1.0.4)
 - Switch from ebabel-eu  to ebabel-games.
 

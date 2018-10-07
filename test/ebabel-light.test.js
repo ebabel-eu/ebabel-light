@@ -1,5 +1,6 @@
 const { mockTHREE } = require('ebabel-mocks');
-const light = require('../index');
+
+const light = require('../src/ebabel-light');
 
 let THREE;
 let scene;
